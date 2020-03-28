@@ -1,22 +1,6 @@
-<html>
-<head>
-
-  <!-- Change the text inside the title tags to your comic title! -->
-  <title>A Simple Comic Site</title>
-
-</head>
-
-<!--
-  The style below applies to the comic image and all navigation images.
-  You can change it or move it to your own stylesheet.
--->
-<style>
-  .comic_img { border:0px; }
-</style>
-
-<body>
 <?php
 // Change these to suit your site!
+$title     = "A Simple Comic Site" // The title of your comic
 $homepage  = "http://example.com"; // The home page of your comic
 $comic_dir = "comics";             // The folder where comic image files are kept
 $news_dir  = "news";               // The folder where post/news HTML files are kept
@@ -122,8 +106,24 @@ function display_news($target_dir) {
 }
 ?>
 
-<!-- This is the part that actually displays the page.
-You can add to it as needed for extra menus, to insert style classes, etc. -->
+  <html>
+<head>
+  <title><?php echo $title; ?></title>
+</head>
+<body>
+
+<!--
+  The style below applies to the comic image and all navigation images.
+  You can change it or move it to your own stylesheet.
+-->
+<style>
+  .comic_img { border:0px; }
+</style>
+
+<!--
+  This is the part that displays the page!
+  You can add to it as needed for extra menus, to insert style classes, etc.
+-->
 
 <div align="center">
 <?php display_comic($comic_dir); /*displays the comic image*/ ?>
