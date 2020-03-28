@@ -1,9 +1,20 @@
-<!--
-The style below applies to the comic image and all navigation images.
-You can change it or move it to your own stylesheet.
--->
-<style>.comic_img { border:0px; }</style>
+<html>
+<head>
 
+  <!-- Change the text inside the title tags to your comic title! -->
+  <title>A Simple Comic Site</title>
+
+</head>
+
+<!--
+  The style below applies to the comic image and all navigation images.
+  You can change it or move it to your own stylesheet.
+-->
+<style>
+  .comic_img { border:0px; }
+</style>
+
+<body>
 <?php
 // Change these to suit your site!
 $homepage  = "http://example.com"; // The home page of your comic
@@ -124,3 +135,6 @@ You can add to it as needed for extra menus, to insert style classes, etc. -->
 <div>
 <?php display_news($news_dir); /*inserts the news post html*/ ?>
 </div>
+  
+</body>
+</html>
